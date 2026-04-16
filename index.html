@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adopet</title>
+  <meta property="og:title" content="Adopet — Pet Adoption">
+  <meta property="og:description" content="Find your perfect pet on Adopet">
+  <meta property="og:image" content="https://adopetil.github.io/icon.png">
+</head>
+<body style="font-family:sans-serif;text-align:center;padding:60px 20px;background:#f0faf1;">
+  <img src="icon.png" width="80" style="border-radius:16px;margin-bottom:20px;" onerror="this.style.display='none'">
+  <h2 style="color:#5BBF68;">Adopet 🐾</h2>
+  <p style="color:#555;">Opening the app...</p>
+  <div id="download" style="display:none;margin-top:30px;">
+    <p style="color:#333;font-size:16px;">Don't have the app yet?</p>
+    <a href="https://play.google.com/store/apps/details?id=com.milhemmaher.adopet"
+       style="display:inline-block;margin:8px;padding:14px 28px;background:#5BBF68;color:#fff;border-radius:12px;text-decoration:none;font-weight:bold;">
+      ▶ Google Play
+    </a>
+    <br>
+    <a href="https://apps.apple.com/app/idXXXXXXXXX"
+       style="display:inline-block;margin:8px;padding:14px 28px;background:#000;color:#fff;border-radius:12px;text-decoration:none;font-weight:bold;">
+       App Store
+    </a>
+  </div>
+  <script>
+    var params = new URLSearchParams(window.location.search);
+    var type = params.get('type');
+    var id = params.get('id');
+    if (type && id) {
+      window.location = 'adopet://' + type + '/' + id;
+    }
+    setTimeout(function() {
+      document.getElementById('download').style.display = 'block';
+      document.querySelector('p').style.display = 'none';
+    }, 2000);
+  </script>
+</body>
+</html>
