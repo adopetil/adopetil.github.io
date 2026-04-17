@@ -9,19 +9,19 @@
   <meta property="og:image" content="https://adopetil.github.io/icon.png">
 </head>
 <body style="font-family:sans-serif;text-align:center;padding:60px 20px;background:#f0faf1;">
-  <img src="icon.png" width="80" style="border-radius:16px;margin-bottom:20px;" onerror="this.style.display='none'">
-  <h2 style="color:#5BBF68;">Adopet 🐾</h2>
-  <p style="color:#555;">Opening the app...</p>
-  <div id="download" style="display:none;margin-top:30px;">
-    <p style="color:#333;font-size:16px;">Don't have the app yet?</p>
-    <a href="https://play.google.com/store/apps/details?id=com.milhemmaher.adopet"
-       style="display:inline-block;margin:8px;padding:14px 28px;background:#5BBF68;color:#fff;border-radius:12px;text-decoration:none;font-weight:bold;">
-      ▶ Google Play
+  <img src="icon.png" width="90" style="border-radius:20px;margin-bottom:16px;box-shadow:0 4px 16px rgba(0,0,0,0.12);" onerror="this.style.display='none'">
+  <h2 style="color:#5BBF68;margin:0 0 8px;">Adopet 🐾</h2>
+  <p id="msg" style="color:#555;margin:0 0 30px;">Opening the app...</p>
+  <div id="download" style="display:none;margin-top:10px;">
+    <p style="color:#333;font-size:16px;margin-bottom:20px;">Don't have the app yet? Download it now:</p>
+    <a href="https://play.google.com/store/apps/details?id=com.milhemmaher.adopet">
+      <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+           alt="Get it on Google Play" height="60">
     </a>
     <br>
-    <a href="https://apps.apple.com/app/idXXXXXXXXX"
-       style="display:inline-block;margin:8px;padding:14px 28px;background:#000;color:#fff;border-radius:12px;text-decoration:none;font-weight:bold;">
-       App Store
+    <a href="https://apps.apple.com/app/idXXXXXXXXX">
+      <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"
+           alt="Download on the App Store" height="42" style="margin-top:12px;">
     </a>
   </div>
   <script>
@@ -33,7 +33,7 @@
     }
     setTimeout(function() {
       document.getElementById('download').style.display = 'block';
-      document.querySelector('p').style.display = 'none';
+      document.getElementById('msg').style.display = 'none';
     }, 2000);
   </script>
 </body>
